@@ -1,4 +1,4 @@
-#Magnus Carlsen Tribute Page
+# Magnus Carlsen Tribute Page
 
 Welcome to my Magnus Carlsen Tribute Page project! 🌟
 
