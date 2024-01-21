@@ -1,0 +1,293 @@
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --grey-color: #808080;
+  --grey-color-2: #efefef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--black-color);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--grey-color);
+  border-radius: 20px;
+}
+
+/* ------------------------------------------HEADER------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ */
+
+header {
+  background-color: var(--black-color);
+  border-right: 2px solid var(--white-color);
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+header nav {
+  height: 100%;
+  width: 250px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+}
+header .logo {
+  color: var(--white-color);
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+header li {
+  list-style: none;
+  color: var(--white-color);
+  margin: 8px 0;
+  font-size: 20px;
+}
+header a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.navbar-toggler {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.icon {
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--white-color);
+  transition: transform 0.3s ease;
+  top: 50%;
+  left: 0;
+  transform-origin: top;
+}
+.icon:before,
+.icon:after {
+  border-radius: 20px;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--white-color);
+  transition: transform 0.3s ease;
+}
+.icon:before {
+  top: -10px;
+  left: 0;
+}
+.icon:after {
+  bottom: -10px;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  header nav {
+    width: 200px;
+    padding: 30px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    border-right: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  header ul {
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: block;
+    width: 100vw;
+    background-color: var(--black-color);
+  }
+  header .toggle-navbar {
+    display: none;
+  }
+  header .logo {
+    margin: 0;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+}
+
+/* ------------------------------------------MAIN------------------------------------------ */
+
+/* ---------------------------------------------------------------------------------------- */
+main {
+  padding-left: 250px;
+}
+section {
+  padding: 1vmax 4vmax;
+}
+section h2 {
+  font-size: 30px;
+  padding: 20px 0;
+}
+section h3 {
+  font-size: 25px;
+  padding: 15px 0;
+}
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  height: 50vh;
+  background-image: url("../img/magnus-carlsen-1.jpg");
+}
+#intro .bg-text {
+  color: var(--white-color);
+  margin-top: 60px;
+}
+#intro h1 {
+  font-size: 60px;
+  padding: 20px 0;
+}
+#intro p {
+  width: 60%;
+  font-size: 25px;
+  padding: 10px 0;
+}
+@media (max-width: 1024px) {
+  main {
+    padding-left: 200px;
+  }
+  #intro h1 {
+    font-size: 40px;
+  }
+  #intro p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    padding-left: 0;
+  }
+  #intro .bg-text {
+    margin-top: 30px;
+  }
+}
+main #bio {
+  background-color: var(--grey-color-2);
+}
+#bio > div {
+  margin-bottom: 20px;
+}
+#bio > div > div {
+  border-left: 2px solid var(--grey-color);
+  padding: 0 20px;
+}
+#bio p {
+  font-size: 18px;
+  padding: 6px 0;
+}
+.bgimg-2 {
+  height: 50vh;
+  background-image: url("../img/magnus-carlsen-2.jpg");
+}
+
+#games .video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+#games iframe {
+  height: 280px;
+  width: 90%;
+  justify-self: center;
+  padding: 20px;
+  max-width: 600px;
+}
+@media (max-width: 1024px) {
+  #games .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.bgimg-3 {
+  height: 50vh;
+  background-image: url("../img/magnus-carlsen-3.jpg");
+}
+
+main #more {
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+#more li {
+  list-style: none;
+}
+#more a {
+  color: var(--white-color);
+  font-size: 20px;
+  line-height: 30px;
+  /* text */
+}
+/* ------------------------------------------MAIN------------------------------------------ */
+
+/* ---------------------------------------------------------------------------------------- */
+footer {
+  padding-left: 250px;
+  background-color: var(--black-color);
+}
+footer div {
+  color: var(--white-color);
+  font-style: italic;
+  font-size: 30px;
+  font-weight: 100;
+  padding: 80px 50px;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  footer {
+    padding-left: 200px;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    padding-left: 0;
+  }
+}
